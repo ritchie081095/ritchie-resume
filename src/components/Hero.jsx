@@ -3,6 +3,7 @@ import { FiMail, FiPhone, FiMapPin, FiArrowDown, FiDownload } from 'react-icons/
 import { profile, stats } from '../data/resume';
 import Typewriter from './Typewriter';
 import NetworkGlobe from './NetworkGlobe';
+import Avatar from './Avatar';
 
 const container = {
   hidden: {},
@@ -12,13 +13,6 @@ const item = {
   hidden: { opacity: 0, y: 26 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
-
-// Initials avatar — swap for a real photo by dropping an <img> in .hero__avatar.
-const initials = profile.name
-  .split(' ')
-  .map((w) => w[0])
-  .slice(0, 2)
-  .join('');
 
 export default function Hero() {
   const scrollTo = (id) =>
@@ -78,7 +72,9 @@ export default function Hero() {
         <motion.div className="hero__aside" variants={item}>
           <div className="hero__avatar">
             <div className="hero__avatar-ring" />
-            <div className="hero__avatar-inner">{initials}</div>
+            <div className="hero__avatar-inner">
+              <Avatar />
+            </div>
           </div>
           <div className="hero__stats">
             {stats.map((s) => (
