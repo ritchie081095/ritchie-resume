@@ -18,6 +18,8 @@ export const profile = {
   phoneHref: 'tel:+639947101127',
   email: 'nalamritchie@gmail.com',
   yearsExperience: '6+',
+  // Resume PDF lives in /public and is served from the site root.
+  resumeFile: 'My-Resume-Ritchie-Nalam.pdf',
   summary:
     'Full Stack Software Developer with over 6 years of experience designing, developing, and maintaining web and mobile applications. Proficient in Laravel, PHP, Vue.js, React Native, WordPress, JavaScript, TypeScript, and MySQL. Passionate about building scalable, user-friendly solutions, solving complex technical challenges, and delivering high-quality software that supports business growth. A collaborative team player with strong problem-solving skills and a commitment to continuous learning and professional development.',
 };
@@ -112,6 +114,8 @@ export const skillGroups = [
 ];
 
 export const projects = [
+  { name: 'OSMS', tags: ['Laravel', 'Vue.js', 'MySQL'], featured: true },
+  { name: 'AIS', tags: ['Laravel', 'MySQL'], featured: true },
   { name: 'Entraguard Security & Access Platform', tags: ['React Native', 'Laravel', 'Node.js'], featured: true },
   { name: 'Enterprise Resource Planning (ERP) System', tags: ['Laravel', 'Vue.js', 'MySQL'] },
   { name: 'Point of Sale (POS) System', tags: ['PHP', 'Mobile App'] },

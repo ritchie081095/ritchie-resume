@@ -63,6 +63,13 @@ export default function Hero() {
             <button className="btn btn--primary" onClick={() => scrollTo('projects')}>
               View Projects <FiArrowDown />
             </button>
+            <a
+              className="btn btn--ghost"
+              href={`${import.meta.env.BASE_URL}${profile.resumeFile}`}
+              download
+            >
+              <FiDownload /> Download CV
+            </a>
             <a className="btn btn--ghost" href={`mailto:${profile.email}`}>
               <FiMail /> Get in touch
             </a>

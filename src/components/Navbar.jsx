@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
+import { FiSun, FiMoon, FiMenu, FiX, FiDownload } from 'react-icons/fi';
 import { navLinks, profile } from '../data/resume';
 import useScrollSpy from './useScrollSpy';
 
@@ -54,6 +54,16 @@ export default function Navbar({ theme, onToggleTheme }) {
         </nav>
 
         <div className="nav__actions">
+          <a
+            className="nav__resume"
+            href={`${import.meta.env.BASE_URL}${profile.resumeFile}`}
+            download
+            title="Download resume (PDF)"
+          >
+            <FiDownload />
+            <span className="nav__resume-text">Resume</span>
+          </a>
+
           <button
             className="icon-btn"
             onClick={onToggleTheme}
